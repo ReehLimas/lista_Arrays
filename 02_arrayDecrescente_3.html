@@ -4,11 +4,28 @@
     //Retorne os elementos do array, separando-os por hífen (n1 - n2 - n3).
 
     //ENTRADA
-
+    const num1 = Number(prompt(`Informe um número inteiro:`));
+    const num2 = Number(prompt(`Informe mais um número:`));
+    const num3 = Number(prompt(`Informe mais um último número:`));
 
     //PROCESSAMENTO
-
-
+    let numeros = []
+    if(num1 > num2 && num2 > num3){
+        numeros = [num3, num2, num1]
+    }
+    else if(num3 > num1 && num2 > num1){
+        numeros = [num1, num2, num3]
+    }
+    else if(num2 > num1 && num2 > num1){
+        numeros = [num1, num3, num2]
+    }
+    else if (num1 > num2 && num3 > num2){
+        numeros = [num2, num3, num1]
+    }
+    else if(num2 > num1 && num1> num3){
+        numeros = [num2, num1, num3]
+    }
+    document.write(numeros.join("- "));
     //SAÍDA
 
 </script>
